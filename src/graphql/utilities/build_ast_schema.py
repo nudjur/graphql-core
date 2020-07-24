@@ -261,6 +261,7 @@ class ASTDefinitionBuilder:
             description=value.description.value if value.description else None,
             deprecation_reason=get_deprecation_reason(value),
             ast_node=value,
+            value=value.name.value
         )
 
     def build_type(self, ast_node: TypeDefinitionNode) -> GraphQLNamedType:
